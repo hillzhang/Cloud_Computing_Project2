@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="duration" basedir="." default="jar">
+    <property name="src.dir" value="src"/>
+    <property name="classes.dir" value="classes"/>
+    <property name="eclipseclasses.dir" value ="bin"/>
+
+    <path id ="hadoop-classpath">
+    	<fileset dir="/usr/other/hadoop/hadoop-2.2.0/share/hadoop/mapreduce/">
+    		<include name="hadoop-mapreduce-client-*-2.2.0.jar"/>
+    	</fileset>
+        <fileset dir="/usr/other/hadoop/hadoop-2.2.0/share/hadoop/common/">
+                <include name="*.jar"/>
+                <include name="lib/mockito-all-1.8.5.jar"/>
+                <include name="lib/junit-4.8.2.jar"/>
+                <include name="lib/commons-cli-1.2.jar"/>
+        </fileset> 
+        <fileset dir="/usr/other/hadoop/hive-0.11.0/lib/">
+                <include name="hive-exec-0.11.0.jar"/>
+        </fileset>   
+    </path>
+	
+    <target name="clean" description="Delete all generated files">
+        <delete dir="${classes.dir}" failonerror="false"/>
+        <delete file="${ant.project.name}.jar"/>
+    </target>
+
+    <target name="compile" description="Compiles the Task">
+    	<mkdir dir="${classes.dir}"/>
+        <javac srcdir="${src.dir}" 
+        destdir="${classes.dir}"
+        classpathref ="hadoop-classpath"
+        />
+    </target>
+
+    <target name="jar" description="JARs the Task" depends = "compile">
+        <jar destfile="${ant.project.name}.jar" basedir="${classes.dir}"/>
+    </target>
+
+    <target name="EclipseJar" description="create a jar for tag owner list package in Eclipse">
+	<jar destfile="{ant.project.name}.jar" basedir="${eclipseclasses.dir}" includes="usertag/*.class"/>
+	</target>
+</project>

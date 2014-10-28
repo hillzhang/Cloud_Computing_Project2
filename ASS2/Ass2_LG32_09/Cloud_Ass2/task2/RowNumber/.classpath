@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="/Users/Hill/Desktop/INFO5349/hivejar/hive_hbase-handler.jar"/>
+	<classpathentry kind="lib" path="/Users/Hill/Desktop/INFO5349/hivejar/hive-0.4.1.jar"/>
+	<classpathentry kind="lib" path="/Users/Hill/Desktop/INFO5349/hivejar/hive-cli-0.5.0.jar"/>
+	<classpathentry kind="lib" path="/Users/Hill/Desktop/INFO5349/hivejar/hive-exec-0.7.0-cdh3u0.jar"/>
+	<classpathentry kind="lib" path="/Users/Hill/Desktop/INFO5349/hivejar/hive-json-serde.jar"/>
+	<classpathentry kind="lib" path="/Users/Hill/Desktop/INFO5349/hivejar/hive-metastore-0.5.0.jar"/>
+	<classpathentry kind="lib" path="/Users/Hill/Desktop/INFO5349/hivejar/hive-metastore-0.7.0-CDH3B4 2.jar"/>
+	<classpathentry kind="lib" path="/Users/Hill/Desktop/INFO5349/hivejar/hive-metastore-0.7.0-CDH3B4.jar"/>
+	<classpathentry kind="lib" path="/Users/Hill/Desktop/INFO5349/hivejar/hive-serde-0.7.0-cdh3u0.jar"/>
+	<classpathentry kind="lib" path="/Users/Hill/Desktop/INFO5349/hivejar/hive-serde-0.7.0-dev.jar"/>
+	<classpathentry kind="lib" path="/Users/Hill/Desktop/INFO5349/hivejar/hive-service-0.5.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
